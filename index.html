@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <script
       defer
-      src="/personalProject/ElectrophyApp/script/script.js"
+      src="/personalProject/LabApp/script/script.js"
     ></script>
   </head>
   <body>
@@ -39,6 +39,10 @@
         <ul class="container__solution">
           <li>Solution</li>
         </ul>
+        <form class="">
+          <input type="text" class="newSolutionText" />
+            <button class="btn__solution">Add New Solution</button>
+          </form>
       </div>
 
       <!-- drugs -->
@@ -46,8 +50,13 @@
         <div>
           <h2>Drugs</h2>
           <ul class="container__drugs">
-            <li>Drugs</li>
+            <li>Drugs</li>           
           </ul>
+          <form class="">
+            <input type="text" class="newDrugText" />
+              <button class="btn__addDrug">Add New Drug</button>    
+              <button class="btn__removeDrug" >Remove Drug</button>  
+            </form>
         </div>
       </div>
     </main>

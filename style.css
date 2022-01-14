@@ -7,3 +7,11 @@
 .hidden {
   opacity: 0;
 }
+
+.drugs--hidden {
+  opacity: 0;
+}
+
+.drugs--visible {
+  opacity: 1;
+}
