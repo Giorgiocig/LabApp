@@ -20,10 +20,16 @@ const users = [user1, user2];
 const btnLogIn = document.querySelector(".login__btn");
 const inputLoginId = document.querySelector(".login__input--id");
 const inputLoginPin = document.querySelector(".login__input--pin");
+const btnAddNewSolution = document.querySelector(".btn__solution");
 const container = document.querySelector(".app");
 const containerSolutions = document.querySelector(".container__solution");
 const containerDrugs = document.querySelector(".container__drugs");
 const navText = document.querySelector(".nav__text");
+const inputSolutionText = document.querySelector(".newSolutionText");
+const inputDrugText = document.querySelector(".newDrugText");
+const btnAddNewDrug = document.querySelector(".btn__addDrug");
+const btnSelectDrug = document.querySelector(".btn__selectDrug");
+const btnRemoveDrug = document.querySelector(".btn__removeDrug");
 
 let currentUser;
 
@@ -72,4 +78,34 @@ btnLogIn.addEventListener("click", function (e) {
     //update nav text
     updateNavText(currentUser.id);
   }
+});
+
+//add new solution
+btnAddNewSolution.addEventListener("click", function (e) {
+  e.preventDefault();
+  const newSolution = inputSolutionText.value;
+  currentUser.solutions.push(newSolution);
+  const html = `<li> ${currentUser.solutions.at(-1)} </li>`;
+  containerSolutions.insertAdjacentHTML("beforeend", html);
+  inputSolutionText.value = "";
+});
+
+btnAddNewDrug.addEventListener("click", function (e) {
+  e.preventDefault();
+  const newDrug = inputDrugText.value;
+  currentUser.drugs.push(newDrug);
+  const html = `<li> ${currentUser.drugs.at(-1)} </li>`;
+  containerDrugs.insertAdjacentHTML("beforeend", html);
+  inputDrugText.value = "";
+});
+
+//removing drugs
+btnRemoveDrug.addEventListener("click", function (e) {
+  e.preventDefault();
+  const index = currentUser.drugs.indexOf(inputDrugText.value);
+  if (index !== -1) {
+    currentUser.drugs.splice(index, 1);
+  }
+  displayDrugs(currentUser.drugs);
+  inputDrugText.value = "";
 });
