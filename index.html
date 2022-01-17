@@ -6,59 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <script
       defer
       src="/personalProject/LabApp/script/script.js"
     ></script>
   </head>
   <body>
-    <nav>
-      <form class="login">
-        <input
-          type="text"
-          placeholder="user"
-          class="login__input login__input--id"
-        />
-        <!-- In practice, use type="password" -->
-        <input
-          type="password"
-          placeholder="PIN"
-          maxlength="4"
-          class="login__input login__input--pin"
-        />
-        <button class="login__btn">&rarr;</button>
-      </form>
-      <p class="nav__text">Insert id and pass</p>
-    </nav>
+
+    <header>
+      <nav class="navbar">
+        <div class="container row align ">
+        <div>
+          <form class="login">
+            <input
+              type="text"
+              placeholder="user"
+              class="login__input login__input--id"
+            />
+            <!-- In practice, use type="password" -->
+            <input
+              type="password"
+              placeholder="PIN"
+              maxlength="4"
+              class="login__input login__input--pin"
+            />
+            <button class="login__btn">&rarr;</button>
+          </form>
+        </div>
+        <p class="nav__text">Insert id and pass</p>
+      </div>
+      </nav>
+    </header>
 
     <main class="app hidden">
-      
-      <!-- solutions -->
-      <div class="container">
-        <h2>Solutions</h2>
-        <ul class="container__solution">
-          <li>Solution</li>
+  <div class="container row container--widthred">
+    
+    <!-- solutions -->
+    <div class="container--solution">
+      <h2>Solutions</h2>
+      <p class="numberSolution" id="solutionsText">number of Solution</p>
+      <ul class="container__solution">
+        <li>Solution</li>
+      </ul>
+      <form class="">
+        <input type="text" class="newSolutionText" />
+          <button class="btn__solution">Add New Solution</button>
+          <button class="btn__removeSolution" >Remove Solution</button>
+        </form>
+    </div>
+    <!-- drugs -->
+      <div class="container--drugs">
+        <h2>Drugs</h2>
+        <p class="numberDrug" id="drugsText">number of drugs = </p>
+        <ul class="container__drugs">
+          <li>Drugs</li>
         </ul>
         <form class="">
-          <input type="text" class="newSolutionText" />
-            <button class="btn__solution">Add New Solution</button>
+          <input type="text" class="newDrugText" />
+            <button class="btn__addDrug">Add New Drug</button>
+            <button class="btn__removeDrug" >Remove Drug</button>
           </form>
       </div>
-
-      <!-- drugs -->
-     
-        <div>
-          <h2>Drugs</h2>
-          <ul class="container__drugs">
-            <li>Drugs</li>           
-          </ul>
-          <form class="">
-            <input type="text" class="newDrugText" />
-              <button class="btn__addDrug">Add New Drug</button>    
-              <button class="btn__removeDrug" >Remove Drug</button>  
-            </form>
-        </div>
-      </div>
+    </div>
+  </div>
+      
+  
     </main>
   </body>
 </html>

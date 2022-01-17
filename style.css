@@ -1,7 +1,42 @@
+:root {
+  --dark-clr: #373a40;
+  --med-clr: #686d76;
+  --blulight-clr: #19d3da;
+  --white: #eeeeee;
+  --red: #a45d5d;
+
+  --fontfamily-title: "Oswald", sans-serif;
+  --fontfamily-text: "Montserrat", sans-serif;
+
+  --font-size-small: 1rem;
+  --font-size-medium: 1.5rem;
+  --font-size-large: 2rem;
+}
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+p {
+  font-family: var(--fontfamily-text);
+}
+
+h2 {
+  font-family: var(--fontfamily-title);
+}
+
+li {
+  list-style: none;
+  font-family: var(--fontfamily-text);
+  padding: 1em 0;
 }
 
 .hidden {
@@ -14,4 +49,92 @@
 
 .drugs--visible {
   opacity: 1;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.align {
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.container--widthred {
+  justify-content: center;
+}
+
+nav {
+  padding: 2em;
+  background-color: var(--dark-clr);
+  opacity: 0.8;
+}
+
+.nav__text {
+  color: #eeeeee;
+  font-size: var(--font-size-medium);
+  font-family: var(--fontfamily-text);
+}
+
+.container--solution,
+.container--drugs {
+  margin: 8em 8em 0 0;
+}
+
+.login__input {
+  border: none;
+  padding: 0.75em 2em;
+  font-size: 1rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.login__btn {
+  border: none;
+  background: white;
+  font-size: 1rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0.75em 2em;
+}
+
+.btn__solution,
+.btn__addDrug {
+  border: none;
+  background: var(--blulight-clr);
+  font-size: 1rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0.75em 0.75em;
+}
+
+.btn__removeSolution,
+.btn__removeDrug {
+  background: #a45d5d;
+  border: none;
+  font-size: 1rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0.75em 0.75em;
+}
+
+.numberSolution,
+.numberDrug {
+  padding-top: 1em;
+  font-weight: bold;
 }
